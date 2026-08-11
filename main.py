@@ -4,7 +4,6 @@ from pydantic import BaseModel
 app = FastAPI(title="Student Details Management API")
 
 # 1. In-Memory Database
-# 1. In-Memory Database
 students_db = {
     1: {"name": "Aarav", "age": 21, "course": "Data Science"},
     2: {"name": "Priya", "age": 22, "course": "Web Development"},
