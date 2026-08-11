@@ -28,7 +28,13 @@ def get_students(course: str = None):
         return filtered
 
     return students_db
-
+# READ SINGLE STUDENT BY ID
+@app.get("/students/{student_id}")
+def get_student(student_id: int):
+    if student_id not in students_db:
+        return {"error": "Student not found"}
+    return students_db[student_id]
+    
 
 
 
