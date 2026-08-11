@@ -5,11 +5,9 @@ app = FastAPI(title="Student Details Management API")
 
 # 1. In-Memory Database
 students_db = {
-    1:{"name":"BhagyaSri","age":21,"course":"Data Analytics"}
-    2:{"name":"Harika","age":21,"course":"Data Analytics"}
-    3:{"name":"Lakshmi Durga","age":22,"course":"Data Analytics"}
-    4:{"name":"Srija","age":21,"course":"Data Science"}
-    5:{"name":"Komali","age":22,"course":"Data Analytics"}
+    1: {"name": "Aarav", "age": 21, "course": "Data Science"},
+    2: {"name": "Priya", "age": 22, "course": "Web Development"},
+    3: {"name": "Rohan", "age": 20, "course": "AI & ML"},
 }
 
 
@@ -91,5 +89,3 @@ def delete_student(student_id: int):
 
     deleted = students_db.pop(student_id)
     return {"message": "Student deleted successfully", "deleted_data": deleted}
-
-
